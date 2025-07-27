@@ -2,9 +2,9 @@
 const { icon, title, value } = Astro.props;
 ---
 
-<li class="flex my-6">
+<li class="flex my-5">
   <img class="p-2" src={icon.src} alt="">
-  <div class="flex flex-col text-sm mx-2 w-full max-w-[10rem]">
+  <div class="flex flex-col text-sm mx-2 w-full max-w-[78%] lg:max-w-[80%]">
     <span class="text-gray-300 font-extralight text-xs text-left uppercase">{title}</span>
     <span class="text-balance whitespace-nowrap overflow-hidden text-left text-ellipsis truncate ">{value}</span>
   </div>
