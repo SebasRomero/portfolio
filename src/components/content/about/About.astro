@@ -1,0 +1,40 @@
+---
+import CardDo from "./CardDo.astro";
+import Cable from "@/assets/cable.svg";
+import Code from "@/assets/code.svg";
+import Brush from "@/assets/brush.svg";
+import Box from "@/assets/box.svg";
+---
+
+<section id="about" class="tab-content">
+  <div class="pl-8 my-8 w-fit">
+    <h1 class="text-3xl font-bold">About me</h1>
+    <div class="h-[0.3rem] rounded-xl my-1 w-full bg-[var(--primary-color)]">
+    </div>
+  </div>
+  <div class="px-8 flex flex-col gap-4">
+    <p>
+      Hey, if you are reading this it's because you want to know more about me.
+      I'm Sebastian Romero, a Software Engineer with 2 years of experience with strong focus in Backend Development, but also with experience in Frontend Development.
+      I like to work closely with people to understand their needs and create solutions using any technology that fits their needs.
+    </p>
+    <p>
+      I have worked with different technologies such as Node.js, Golang, Java and Typescript, this including framewoks like NestJS, Spring Boot and React,
+      also including database experience using MongoDB and MySQL.
+    </p>
+    <p>
+      Due to my strong focus in Backend Development, I also understand the importance of DevOps practices, so I have experience with Docker, AWS and CI/CD pipelines using GitHub Actions.
+    </p>
+  </div>
+  <div class="px-8 flex flex-col justify-between h-full mt-8 gap-5">
+    <h2 class="text-2xl font-bold">What I do</h2>
+    <div>
+      <ul class="grid gap-x-4 gap-y-6 grid-cols-1 md:grid-cols-2">
+        <CardDo icon={Cable.src} title="Software Architecture" description="Designing and implementing software solutions from scratch."/>
+        <CardDo icon={Code.src} title="Backend Development" description="Creating robust and performant server-side applications."/>
+        <CardDo icon={Brush.src} title="Frontend Development" description="Building user interfaces with modern frameworks."/>
+        <CardDo icon={Box.src} title="DevOps Practices" description="Implementing CI/CD pipelines and cloud infrastructure."/>
+      </ul>
+    </div>
+  </div>
+</section>

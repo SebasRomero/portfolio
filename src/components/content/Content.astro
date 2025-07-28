@@ -1,0 +1,38 @@
+---
+import Header from "../navbar/Header.astro";
+import About from "./about/About.astro";
+import Resume from "./Resume.astro";
+import Projects from "./Projects.astro";
+import Blog from "./Blog.astro";
+---
+
+<div class="bg-[var(--background-card)] w-full rounded-3xl border border-[var(--border-color)]">
+  <Header />
+  <section>
+    <About id="about" />
+    <Resume id="resume" />
+    <Projects id="projects" />
+    <Blog id="blog" />
+  </section>
+</div>
+
+<script>
+  const buttons = document.querySelectorAll("button[data-tab]");
+  const sections = document.querySelectorAll(".tab-content");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const targetId = btn.getAttribute("data-tab");
+      sections.forEach((sec) => {
+        sec.classList.add("hidden");
+      });
+      document.getElementById(targetId).classList.remove("hidden");
+    });
+  });
+</script>
+
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
