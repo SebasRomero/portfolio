@@ -8,27 +8,43 @@ import Memoji from "@/assets/memoji.avif";
 ---
 
 <aside
-  class="relative bg-[var(--background-card)] w-full lg:max-w-[16vw] h-full rounded-3xl border border-[var(--border-color)]"
+  class="relative bg-[var(--background-card)] w-full xl:max-w-[16vw] h-full rounded-3xl border border-[var(--border-color)]"
 >
-  <div class="absolute right-0">
-    <input type="checkbox" class="hidden" id="toggle-info">
-    <label for="toggle-info" class="rounded-tr-3xl rounded-bl-2xl px-4 py-1 md:pl-6 md:pr-8 md:size-10 bg-[var(--primary-color)] z-10 lg:hidden">v</label>
-  </div>
-  <div class="px-4 md:px-8 py-4 flex flex-col items-center text-center ">
-    <div
-      class="w-full lg:mt-10 flex lg:flex-col flex-row justify-start md:justify-center items-center"
+  <div class="absolute right-0 rounded-tr-3xl rounded-bl-2xl py-1 pl-2 pr-2 md:pl-4 md:pr-10 md:size-10 bg-[var(--primary-color)] z-10 xl:hidden">
+    <input type="checkbox" class="hidden" id="toggle-info" />
+    <label
+      for="toggle-info"
+      class=""
     >
-      <div class="rounded-3xl size-20 lg:size-30 lg:mx-auto">
-        <img src={Memoji.src} alt="Me" class="rounded-2xl size-20 lg:size-30" />
-      </div>
-      <div
-        class="ml-4 flex flex-col lg:flex-col justify-end md:justify-center"
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-arrow-down-icon lucide-arrow-down"
+        ><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg
       >
+    </label>
+  </div>
+  <div class="px-4 md:px-8 py-4 flex flex-col items-center text-center">
+    <div
+      class="w-full xl:mt-10 flex xl:flex-col flex-row justify-start xl:justify-center items-center"
+    >
+      <div class="rounded-3xl size-20 xl:size-30 xl:mx-auto">
+        <img src={Memoji.src} alt="Me" class="rounded-2xl size-20 xl:size-30" />
+      </div>
+      <div class="ml-4 flex flex-col xl:flex-col justify-end md:justify-center">
         <div class="my-2 lg:my-4">
           <span class="md:text-2xl text-base">Sebastian Romero</span>
         </div>
         <div>
-          <span class="bg-[var(--secondary-color)] px-3 py-1 rounded-xl text-xs md:text-base"
+          <span
+            class="bg-[var(--secondary-color)] px-3 py-1 rounded-xl text-xs md:text-base"
             >Software Engineer</span
           >
         </div>
@@ -37,7 +53,7 @@ import Memoji from "@/assets/memoji.avif";
     <section id="info">
       <div class="h-[0.5px] my-8 w-full bg-[#565656]"></div>
       <div class="w-full flex flex-col h-full justify-between">
-        <ul class="grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1">
+        <ul class="grid xl:grid-cols-1 md:grid-cols-2 grid-cols-1">
           <a href="mailto:sebastian_engineer@hotmail.com">
             <InfoComponent
               icon={MailIcon}
@@ -96,12 +112,12 @@ import Memoji from "@/assets/memoji.avif";
 </aside>
 
 <script>
-  const toggle = document.getElementById('toggle-info');
-  const info = document.getElementById('info');
+  const toggle = document.getElementById("toggle-info");
+  const info = document.getElementById("info");
 
-  toggle?.addEventListener('change', () => {
-    if(!info) return;
+  toggle?.addEventListener("change", () => {
+    if (!info) return;
     const input = toggle as HTMLInputElement;
-    info.style.display = input.checked ? 'none' : 'block';
+    info.style.display = input.checked ? "none" : "block";
   });
 </script>

@@ -22,11 +22,12 @@ import Blog from "./Blog.astro";
 
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      const targetId = btn.getAttribute("data-tab");
+      const targetId = btn.getAttribute("data-tab") || "";
       sections.forEach((sec) => {
         sec.classList.add("hidden");
       });
-      document.getElementById(targetId).classList.remove("hidden");
+      const target = document.getElementById(targetId);
+      if (target) target.classList.remove("hidden");
     });
   });
 </script>
