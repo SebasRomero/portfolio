@@ -1,0 +1,76 @@
+---
+import ResumeItem from "./ResumeItem.astro";
+import Case from "@/assets/case.svg";
+import resume from "@/content/resume.json";
+
+const workExperience = resume.work_experience;
+---
+
+<section id="resume" class="tab-content hidden my-8">
+  <div class="pl-8 mb-8 w-fit">
+    <h1 class="text-3xl font-bold">Resume</h1>
+    <div class="h-[0.3rem] rounded-xl my-1 w-full bg-[var(--primary-color)]">
+    </div>
+  </div>
+  <div class="timeline px-8 w-full relative">
+    <div class="title-wrapper flex items-center gap-2">
+      <img class="size-10" src={Case.src} alt="Case icon" />
+      <div class="text-xl font-semibold">Experience</div>
+    </div>
+    <ol class="timeline-list flex flex-col gap-4">
+      {
+        workExperience.map((item) => (
+          <ResumeItem
+            title={item.position}
+            company={item.company}
+            description={item.bullets}
+            date={item.date}
+          />
+        ))
+      }
+    </ol>
+  </div>
+  <div class="timeline px-8 w-full relative">
+    <div class="title-wrapper flex items-center gap-2">
+      <img class="size-10" src={Case.src} alt="Case icon" />
+      <div class="text-xl font-semibold">Education</div>
+    </div>
+     <div id="timeline-line" class="absolute left-[3.1rem] top-10 h-10 w-px bg-[var(--primary-color)] z-0"></div>
+    <ol class="timeline-list flex flex-col gap-4">
+      <ResumeItem
+        title={"Bachelor's Degree in Computer Science"}
+        company={"Universidad de la Costa"}
+        description={{
+          bullet1: "4.08/5 GPA",
+          bullet2: "Winner of the Amateur Tournament of Table Tennis",
+          bullet3: "Diploma Course on Software Technology for Industry 4.0",
+        }}
+        date={"2019 - 2024"}
+      />
+    </ol>
+  </div>
+</section>
+
+<style>
+  .timeline {
+    margin-bottom: 30px;
+  }
+
+  .timeline .title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  .timeline-list {
+    font-size: var(--fs-6);
+    margin-left: 45px;
+  }
+
+  .timeline-list span {
+    color: var(--vegas-gold);
+    font-weight: var(--fw-400);
+    line-height: 1.6;
+  }
+</style>

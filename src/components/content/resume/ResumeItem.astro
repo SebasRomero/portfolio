@@ -1,0 +1,53 @@
+---
+const { title, company, description, date } = Astro.props;
+---
+
+<li class="timeline-item">
+  <div class="flex flex-col gap-2 h-full">
+    <span class="timeline-title text-lg font-semibold">{title} - {company}</span>
+    <span class="text-[var(--primary-color)]">{date}</span>
+    {
+        Object.entries(description).map(([_, value]) => (
+            <span class="timeline-text font-light text-gray-300">- {value}</span>
+        ))}
+    </div>
+</li>
+
+<style>
+
+.timeline-item { position: relative; }
+
+.timeline-item:not(:last-child) { margin-bottom: 20px; }
+
+.timeline-item-title {
+  font-size: var(--fs-6);
+  line-height: 1.3;
+  margin-bottom: 7px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -27px;
+  width: 1px;
+  height: calc(100% + 80px);
+  background: var(--primary-color);
+}
+
+.timeline-item:last-child::before {
+  height: 0;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 0.8rem;
+  left: -29px;
+  height: 6px;
+  width: 6px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--primary-color);
+}
+</style>
