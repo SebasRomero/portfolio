@@ -1,0 +1,51 @@
+---
+const { name, image, description, stack, tryLink} = Astro.props;
+---
+
+<div>
+  <div class="card">
+    <a href={tryLink} target="_blank"
+      class="card__content text-center relative transition-transform duration-1000 text-white font-bold"
+    >
+      <div class="card__front flex items-center justify-center">
+        <img src={image} class="bg-cover rounded-2xl" alt={"image"} />
+      </div>
+      <div
+        class="card__back absolute top-0 bottom-0 right-0 left-0 flex items-center justify-center border rounded-2xl p-2"
+      >
+        <span class="text-sm font-light">{description}</span>
+      </div>
+    </div>
+  </a>
+  <div class="pt-4">
+    <h1 class="font-bold"> {name} </h1>
+    <span class="font-light text-sm text-gray-300">{stack}</span>
+  </div>
+</div>
+
+<style>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  /* Vanilla CSS for flip card */
+  .card {
+    perspective: 800px;
+  }
+  .card__content {
+    transform-style: preserve-3d;
+  }
+  .card:hover .card__content {
+    transform: rotateY(0.5turn);
+  }
+
+  .card__front,
+  .card__back {
+    backface-visibility: hidden;
+  }
+  .card__back {
+    transform: rotateY(0.5turn);
+  }
+</style>

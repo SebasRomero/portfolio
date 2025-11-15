@@ -1,3 +1,18 @@
+---
+import HeadContent from "./HeadContent.astro";
+import projects from "@/content/projects.json";
+import ProjectItem from "./projects/ProjectItem.astro";
+---
+
 <section id="projects" class="tab-content hidden">
-    proje
+  <HeadContent title="Projects" />
+  <div class="flex justify-center items-center py-10 h-full">
+    <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-8 gap-y-4 md:gap-y-12 lg:gap-y-14 px-8">
+      {
+        projects.projects.map((project) => {
+          return <ProjectItem name={project.name} image={project.bg} stack={project.stack} description={project.description} tryLink={project.try ?? project.github_url}/>;
+        })
+      }
+    </div>
+  </div>
 </section>
