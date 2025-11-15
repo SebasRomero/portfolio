@@ -1,5 +1,5 @@
 ---
-const { title, company, description, date } = Astro.props;
+const { title, company, description, date, tools } = Astro.props;
 ---
 
 <li class="timeline-item">
@@ -10,6 +10,12 @@ const { title, company, description, date } = Astro.props;
         Object.entries(description).map(([_, value]) => (
             <span class="timeline-text font-light text-gray-300">- {value}</span>
         ))}
+        {
+          Array.isArray(tools) && <div>
+          <span class="text-(--primary-color) font-bold">Tools: </span>
+          <span>{tools.map((element: string)=> element)}</span>
+          </div>
+        }
     </div>
 </li>
 
