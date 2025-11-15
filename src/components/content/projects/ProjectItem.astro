@@ -4,7 +4,7 @@ const { name, image, description, stack, tryLink} = Astro.props;
 
 <div>
   <div class="card">
-    <a href={tryLink} target="_blank"
+    <div
       class="card__content text-center relative transition-transform duration-1000 text-white font-bold"
     >
       <div class="card__front flex items-center justify-center">
@@ -16,10 +16,12 @@ const { name, image, description, stack, tryLink} = Astro.props;
         <span class="text-sm font-light">{description}</span>
       </div>
     </div>
-  </a>
+  </div>
   <div class="pt-4">
-    <h1 class="font-bold"> {name} </h1>
-    <span class="font-light text-sm text-gray-300">{stack}</span>
+    <a  href={tryLink} target="_blank">
+      <h1 class="font-bold"> {name} </h1>
+      <span class="font-light text-sm text-gray-300">{stack}</span>
+    </a>
   </div>
 </div>
 
