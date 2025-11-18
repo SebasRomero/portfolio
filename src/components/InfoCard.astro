@@ -8,9 +8,9 @@ import Memoji from "@/assets/memoji.avif";
 ---
 
 <aside
-  class="relative bg-[var(--background-card)] w-full xl:max-w-[16vw] h-full rounded-3xl border border-[var(--border-color)]"
+  class="relative top-0 xl:sticky xl:top-12 bg-(--background-card) w-full xl:max-w-[16vw] h-full rounded-3xl border border-(--border-color)"
 >
-  <div class="absolute right-0 rounded-tr-3xl rounded-bl-2xl py-1 pl-2 pr-2 md:pl-4 md:pr-10 md:size-10 bg-[var(--primary-color)] z-10 xl:hidden">
+  <div class="absolute right-0 rounded-tr-3xl rounded-bl-2xl py-1 pl-2 pr-2 md:pl-4 md:pr-10 md:size-10 bg-(--primary-color) z-10 xl:hidden">
     <input type="checkbox" class="hidden" id="toggle-info" />
     <label
       for="toggle-info"
@@ -44,7 +44,7 @@ import Memoji from "@/assets/memoji.avif";
         </div>
         <div>
           <span
-            class="bg-[var(--secondary-color)] px-3 py-1 rounded-xl text-xs md:text-base"
+            class="bg-(--secondary-color) px-3 py-1 rounded-xl text-xs md:text-base"
             >Software Engineer</span
           >
         </div>
@@ -65,7 +65,7 @@ import Memoji from "@/assets/memoji.avif";
           <InfoComponent icon={Cake} title="Age" value="23" />
           <InfoComponent icon={Location} title="Location" value="Miami, FL" />
         </ul>
-        <div class="h-[0.5px] xl:h-[0px] xl:my-8 w-full xl:hidden bg-[#565656]">
+        <div class="h-[0.5px] xl:h-0 xl:my-8 w-full xl:hidden bg-[#565656]">
         </div>
         <ul class="flex justify-center my-6">
           <li class="mx-2">

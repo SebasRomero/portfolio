@@ -4,7 +4,7 @@ import ItemHeader from "./ItemHeader.astro";
 
 <header class="relative w-full">
   <ul
-    class="hidden md:flex absolute bg-[var(--secondary-color)] right-0 gap-12 py-2 pl-4 pr-12 rounded-tr-3xl rounded-bl-2xl"
+    class="hidden md:flex absolute bg-(--secondary-color) right-0 gap-12 py-2 pl-4 pr-12 rounded-tr-3xl rounded-bl-2xl"
   >
     <li><ItemHeader title="About" /></li>
     <li><ItemHeader title="Resume" /></li>
@@ -12,7 +12,7 @@ import ItemHeader from "./ItemHeader.astro";
   </ul>
 
   <ul
-    class="md:hidden fixed bg-[var(--secondary-color)] opacity-95 flex mx-auto bottom-0 left-0 right-0 w-full items-center justify-center z-10 rounded-t-3xl"
+    class="md:hidden fixed bg-(--secondary-color) opacity-95 flex mx-auto bottom-0 left-0 right-0 w-full items-center justify-center z-10 rounded-t-3xl"
   >
     <li><ItemHeader title="About" /></li>
     <li><ItemHeader title="Resume" /></li>
