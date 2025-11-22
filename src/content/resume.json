@@ -1,0 +1,53 @@
+{
+    "information": {
+        "name": "Sebastian",
+        "last_name": "Romero",
+        "github": "sebasromero",
+        "github_url": "https://github.com/sebasromero",
+        "linkedin":"sebasromerog",
+        "linkedin_url":"https://linkedin.com/in/sebasromerog",
+        "email": "sebastian_engineer@hotmail.com"
+    },
+    "work_experience": [
+        {
+            "company": "Freelance (Remote)",
+            "position":"Software Engineer",
+            "date": "Mar 2025 - Aug 2025",
+            "bullets": {
+                "bullet1": "Designed and developed a full-stack e-commerce platform for protein supplements using Java 21, Spring Boot, and Spring Security with JWT-based role authentication, ensuring secure access control for admin and customer roles.",
+                "bullet2": "Built a RESTful API supporting product management (supplements, categories, flavors, and brands) and image uploads to Amazon S3.",
+                "bullet3": "Configured CI/CD pipelines via GitHub Actions, enabling automated builds, tests, and zero-downtime deployment to AWS EC2.",
+                "bullet4": "Developed a responsive, high-performance front-end with Astro, React, and Tailwind CSS, improving load speed and user experience across desktop and mobile devices.",
+                "bullet5": "Reduced manual deployment time by 90% through CI/CD automation, Docker and IaC (Infrastructure as Code).",
+                "bullet6": "Provisioned AWS infrastructure using Terraform, automating creation of EC2 instances, S3 buckets, and IAM roles for scalable deployment."
+            },
+            "tools": ["AWS, ", "EC2, ", "S3, ", "Java, ", "Spring, ", "Spring Security, ", "SpringBoot, ", "Docker, ", "MySQL, ", "React, ", "Astro, ", "Tailwind CSS"]
+        },
+        {
+            "company": "OpenBox (Remote)",
+            "position":"Software Engineer",
+            "date": "Aug 2024 - Jan 2025",
+            "bullets": {
+                "bullet1": "Deployed backend infrastructure on AWS EC2 with Nginx and Cloudflare TLS, achieving 99.9% uptime and reducing latency by 25%.",
+                "bullet2": "Integrated PayPal as a payment gateway, enabling seamless online transactions and improving the user purchase experience.",
+                "bullet3": "Developed real-time data sync with WebSocket (JS/TS), cutting client-server latency by 40% and enhancing user responsiveness.",
+                "bullet4": "Designed and implemented a MongoDB database optimized for high-volume transactions, ensuring reliable data storage and accessibility."
+            },
+            "tools": ["AWS, ","EC2, ", "SES, ", "NestJS, ", "NodeJS, ", "MongoDB, ", "Golang, ", "Nginx, ", "Docker, ", "Cloudflare, ", "REST, ", "Stripe"]
+        },
+        {
+            "company": "Coderlabs (Remote)",
+            "position": "Software Engineer",
+            "date": "Jul 2023 - Jun 2024",
+            "bullets": {
+                "bullet1": "Built a role-based authentication and authorization system with Node.js, improving user security and access control.",
+                "bullet2": "Integrated MercadoPago payment gateway (JS/TS, Node.js, GraphQL, MongoDB), doubling subscription revenue within 2 months.",
+                "bullet3": "Led the redesign of the company website using Astro, React.js, and Tailwind CSS, improving performance and usability for over 300 monthly users.",
+                "bullet4": "Redesigned company website (Astro, React, Tailwind), enhancing Core Web Vitals and boosting engagement from 300 to 500 monthly users.",
+                "bullet5": "Integrated unit tests using Jest, resolving interoperability issues and enhancing product reliability by 80% due to test coverage, with over 110 test cases.",
+                "bullet6": "Collaborated with clients in bi-weekly Agile sprints, aligning requirements to deliver 100% of milestones on schedule."
+            },
+            "tools": ["NestJS, ","MongoDB, ", "GraphQL, ", "AWS, ", "Golang, ", "NodeJS, ", "React, ", "Tailwind CSS, ", "Astro, ", "GraphQL, ", "AWS, ", "Jest"]    
+        }
+    ]
+}
