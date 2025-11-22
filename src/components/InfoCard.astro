@@ -5,6 +5,7 @@ import Cake from "@/assets/cake.svg";
 import Location from "@/assets/location.svg";
 import Phone from "@/assets/phone.svg";
 import Memoji from "@/assets/memoji.avif";
+import { calculateAge } from "@/functions/calculateAge";
 ---
 
 <aside
@@ -62,7 +63,7 @@ import Memoji from "@/assets/memoji.avif";
             />
           </a>
           <InfoComponent icon={Phone} title="Phone" value="+1 (305) 970-0394" />
-          <InfoComponent icon={Cake} title="Age" value="23" />
+          <InfoComponent icon={Cake} title="Age" value={calculateAge()}/>
           <InfoComponent icon={Location} title="Location" value="Miami, FL" />
         </ul>
         <div class="h-[0.5px] xl:h-0 xl:my-8 w-full xl:hidden bg-[#565656]">
