@@ -4,7 +4,7 @@
       "name": "Blacky Suplementos",
       "description": "Designed and developed a full-stack e-commerce platform for protein supplements using Java 21, Spring Boot, and Spring Security with JWT-based role authentication, ensuring secure access control for admin and customer roles.",
       "try": "https://blacky.com.co",
-      "bg": "src/assets/blacky_bg.avif",
+      "bg": "/blacky_bg.avif",
       "stack": "Java, Spring, Spring Boot, React, TailwindCss, MySQL, Docker, AWS, CI/CD"
     },
     {
@@ -12,7 +12,7 @@
       "description": "Tempfish - TFS or Temporary File Sharing is a CLI application will help you to quickly share encrypted files and get them immediately via HTTPS with a few commands.",
       "github_url": "https://github.com/SebasRomero/tfs",
       "explanation": "/my-projects/tempfish",
-      "bg": "src/assets/tempfish_bg.avif",
+      "bg": "/tempfish_bg.avif",
       "stack": "Golang, AWS S3, AWS EC2"
 
     },
@@ -22,7 +22,7 @@
       "github_url": "https://github.com/SebasRomero/shortenerUrl",
       "explanation": "/my-projects/shortener-url",
       "try": "https://shortener-url-frontend.vercel.app/",
-      "bg": "src/assets/short_url_bg.avif",
+      "bg": "/short_url_bg.avif",
       "stack": "Golang, AWS EC2, React, MongoDB"
 
     },
@@ -30,7 +30,7 @@
       "name": "Gonerate",
       "description": "Gonerate is a simple cli application that helps you generating the basic code to run a REST application without any external dependencies.",
       "github_url": "https://github.com/SebasRomero/gonerate",
-      "bg": "src/assets/tempfish_bg.avif",
+      "bg": "/tempfish_bg.avif",
       "stack": "Golang, AWS EC2, MongoDB"
     }
   ]
