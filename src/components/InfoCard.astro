@@ -11,12 +11,11 @@ import { calculateAge } from "@/functions/calculateAge";
 <aside
   class="relative top-0 xl:sticky xl:top-12 bg-(--background-card) w-full xl:max-w-[16vw] h-full rounded-3xl border border-(--border-color)"
 >
-  <div class="absolute right-0 rounded-tr-3xl rounded-bl-2xl py-1 pl-2 pr-2 md:pl-4 md:pr-10 md:size-10 bg-(--primary-color) z-10 xl:hidden">
+  <div
+    class="absolute right-0 rounded-tr-3xl rounded-bl-2xl py-1 pl-2 pr-2 md:pl-4 md:pr-10 md:size-10 bg-(--primary-color) z-10 xl:hidden"
+  >
     <input type="checkbox" class="hidden" id="toggle-info" />
-    <label
-      for="toggle-info"
-      class=""
-    >
+    <label for="toggle-info" class="">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -39,7 +38,9 @@ import { calculateAge } from "@/functions/calculateAge";
       <div class="rounded-3xl size-20 xl:size-30 xl:mx-auto">
         <img src={Memoji.src} alt="Me" class="rounded-2xl size-20 xl:size-30" />
       </div>
-      <div class="flex flex-col xl:flex-col justify-end md:justify-center ml-4 xl:ml-0">
+      <div
+        class="flex flex-col xl:flex-col justify-end md:justify-center ml-4 xl:ml-0"
+      >
         <div class="my-2 lg:my-4">
           <span class="md:text-2xl text-base">Sebastian Romero</span>
         </div>
@@ -63,8 +64,7 @@ import { calculateAge } from "@/functions/calculateAge";
             />
           </a>
           <InfoComponent icon={Phone} title="Phone" value="+1 (305) 970-0394" />
-          <InfoComponent icon={Cake} title="Age" value={calculateAge()}/>
-          <InfoComponent icon={Location} title="Location" value="Miami, FL" />
+          <InfoComponent icon={Cake} title="Age" value={calculateAge()} />
         </ul>
         <div class="h-[0.5px] xl:h-0 xl:my-8 w-full xl:hidden bg-[#565656]">
         </div>
